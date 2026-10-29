@@ -8,9 +8,17 @@
     {
       "src": "api/weibo.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "api/robots.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "/robots\\.txt",
+      "dest": "/api/robots.js"
+    },
     {
       "src": "/weibo/?",
       "dest": "/api/weibo.js"
