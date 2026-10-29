@@ -4,9 +4,17 @@
     {
       "src": "index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "api/weibo.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "/weibo/?",
+      "dest": "/api/weibo.js"
+    },
     {
       "src": "/(.*)",
       "dest": "/",
